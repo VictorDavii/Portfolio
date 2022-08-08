@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,400;0,700;1,600&family=Heebo:wght@200;400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,400;0,600;1,100;1,200;1,400;1,500;1,600&display=swap');
+
+/*Pré Configurações*/ 
+
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    color: #fff;
+}
+
+:root{
+    --color-principal:cornflowerblue ;
+    --color-secundaria: #ebae34;
+    --color-complementar: #111;
+    --font-principal: 'Barlow', sans-serif;
+    --font-secundaria:'Heebo', sans-serif;
+    --font-leitura: 'Roboto Mono',serif;
+}
+
+body{
+    background:#111;
+}
+
+/*Inicio da Pagina*/
+
+.viewport{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.wrapper-img{
+    position: absolute;
+    overflow: hidden;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper-img img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.1;
+    animation: zoom 20s;
+}
+
+/*Animação desenvolvida por João Carlos Lima*/
+
+@keyframes zoom{
+    0%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+/*Animação adaptada por Victor Davi Camacho - da legenda subindo*/
+
+@keyframes UpBanner{
+    0%{
+        transform: translateY(10rem);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+ 
+.viewport header{
+    justify-items: center;
+    margin: 0 auto;
+    width: 100%;
+    padding: 2rem;
+}
+
+nav{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: azure;
+    font-family: var(--font-principal);
+    margin: 0 auto;
+}
+
+nav li{
+    float: left;
+    margin-left: 1rem; 
+    font-family: var(--font-principal);
+    margin: 0 1rem;
+}
+
+.card{
+    text-align: center;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    gap: 2rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.wrapper-logo{
+    width: 12.5rem;
+    height: 12.5rem;
+    border-radius: 50%;
+}
+
+.legend{
+    animation: UpBanner 2s;
+}
+
+.legend h1{
+    color: var(--color-principal);
+    font-family: var(--font-principal);
+    letter-spacing: 0.4rem;
+    padding-bottom: 1rem;
+    font-size: 2.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.438) ;
+}
+
+.legend span{
+    background: var(--color-principal);
+    padding: 0 0.1em;
+    color: #ddd;
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow:  1px 1px 2px rgba(0, 0, 0, 0.438) ;
+}
+
+.legend p{
+    font-size: 1.2rem;
+    font-family: var(--font-leitura);
+    letter-spacing: 0.2rem;
+} 
+
+.legend i{
+    color: var(--color-principal);
+    margin: 0 5px;
+}
+
+/*Utilizei diferentes forma de posicionar um imagem de background*/
+
+main{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: #111;
+    background-image: url(imagens/background-storieop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.storie{
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    padding: 3rem;
+    display: flex;
+    gap: 3rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.storie aside img{
+    max-width: 400px;
+}
+
+.description{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.description h2{
+    font-size: 2.5rem;
+    font-family: var(--font-principal);
+    color: var(--color-secundaria);
+}
+
+.description h3{
+   font-family: var(--font-secundaria);
+   margin-top: 1rem;
+   font-weight: 200; 
+}
+
+.description p{
+    font-family: var(--font-leitura);
+    width: 80%;
+}
+
+.description button{
+    border-radius: 10px;
+    border: none;
+    background: var(--color-secundaria);
+    font-family: var(--color-secundaria);
+    font-weight: 700;
+    color: var(--color-complementar);
+    text-transform: uppercase;
+    padding: 1rem 1.6rem;
+    box-shadow: 2px 2px 4px rgba(8, 8, 8, 0.493);
+}
+
+.description button:hover{
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+    color: #fff;
+    background: var(--color-principal);
+    font-family: var(--color-secundaria);
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 1rem 1.6rem;
+}
+
+
