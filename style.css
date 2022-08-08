@@ -72,7 +72,8 @@ body{
         transform: translateY(0);
     }
 }
- 
+
+
 .viewport header{
     justify-items: center;
     margin: 0 auto;
@@ -95,6 +96,12 @@ nav li{
     margin-left: 1rem; 
     font-family: var(--font-principal);
     margin: 0 1rem;
+}
+
+nav li:hover{
+    cursor: pointer;
+    color: var(--color-principal);
+    animation: lines 5s;
 }
 
 .card{
@@ -141,11 +148,13 @@ nav li{
 .legend p{
     font-size: 1.2rem;
     font-family: var(--font-leitura);
+    color: #ddd;
     letter-spacing: 0.2rem;
+
 } 
 
 .legend i{
-    color: var(--color-principal);
+    color: var(--color-secundaria);
     margin: 0 5px;
 }
 
@@ -153,7 +162,7 @@ nav li{
 
 main{
     width: 100%;
-    height: 100vh;
+    height: 110vh;
     position: relative;
     background: #111;
     background-image: url(imagens/background-storieop.jpg);
@@ -166,7 +175,7 @@ main{
     width: 80%;
     height: 100%;
     margin: auto;
-    padding: 3rem;
+    padding: 2.5rem;
     display: flex;
     gap: 3rem;
     justify-content: space-between;
@@ -197,7 +206,17 @@ main{
 
 .description p{
     font-family: var(--font-leitura);
-    width: 80%;
+    width: 100%;
+    color: #ddd;
+    line-height: 1.6rem;
+}
+
+.description p .links{
+    color: var(--color-secundaria);
+}
+
+.description p .links:hover{
+    text-decoration: underline;
 }
 
 .description button{
