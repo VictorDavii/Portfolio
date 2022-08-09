@@ -162,7 +162,7 @@ nav li:hover{
 
 main{
     width: 100%;
-    height: 110vh;
+    height: 100%;
     position: relative;
     background: #111;
     background-image: url(imagens/background-storieop.jpg);
@@ -172,18 +172,27 @@ main{
 }
 
 .storie{
-    width: 80%;
+    width: 90%;
     height: 100%;
     margin: auto;
-    padding: 2.5rem;
+    padding: 4rem;
     display: flex;
     gap: 3rem;
     justify-content: space-between;
     align-items: center;
 }
 
+.storie .wrapper-img-side{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .storie aside img{
-    max-width: 400px;
+    width: 25rem;
+    margin: auto 0;
 }
 
 .description{
@@ -205,6 +214,7 @@ main{
 }
 
 .description p{
+    text-align: justify;
     font-family: var(--font-leitura);
     width: 100%;
     color: #ddd;
