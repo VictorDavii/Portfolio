@@ -1,11 +1,14 @@
 @charset "UTF-8"; 
+
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+
 *{
     margin: 0%;
     padding: 0%;
+    font-size: 16px;
+    box-sizing: border-box;
 }
-.title{
-    font-size:26px ;
-}
+
 body{
     font-family: Arial, Helvetica, sans-serif;
     background: black;
@@ -18,27 +21,49 @@ body{
 header{
     text-align: center;
     background-color: #3498DB;
-    padding: 8px;
+    padding: 0.5rem;
     color: white;
+    overflow: hidden;
 }
+
+.title{
+    animation: slogan 3s linear;
+    font-size: 1.4rem;
+    font-family: "Aboreto", sans-serif;
+    font-style: italic;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+@keyframes slogan{
+    0%{
+        transform: translateX(-100%);
+    }
+
+    100%{
+        transform: translateX(0);
+    }
+}
+
+
 section{
-    padding: 20px;
+    padding: 2rem ;
     background-image: url(imagens/people.jpg);
     background-size: cover;
     overflow: hidden;
 }
 .formcontainer{
-    max-width: 230px;
+    max-width: 18rem;
     color: black;
     background: #ffffffbb;
-    padding: 20px;
+    padding: 1.2rem;
     float: right;
+    border-radius: 5px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.411);
 }
-h2{
-    font-size: 16px;
-}
+
 .mb{
-    margin-bottom: 15px;
+    margin-bottom: 1rem;
+    text-align: justify;
 }
 
 input, select{
@@ -47,7 +72,7 @@ input, select{
     padding: 10px;
     border: none;
     margin-bottom: 10px;
-    
+    font-size: 14px;
 }
 
 #estado{
@@ -77,18 +102,21 @@ select{
     background-position-y: center;
 }
 footer{
-    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    gap: 2rem;
     text-align: center;
     background-color: #1D1E1F;
 }
 .picture{
     width: 160px;
+    border-radius: 5px;
 }
 .discription{
-    display: inline-block;
     max-width: 40%;
     text-align: left;
-    margin-left: 40px;
 }
 .discription p , .discription h3 {
     margin-bottom: 20px;
@@ -101,9 +129,10 @@ footer{
     }
     footer{
         margin: 0 auto;
+        flex-direction: column;
     }
     .picture{
-        width: 80%;
+        width: 70%;
         background-size: cover;
         border-radius: 10px;
     }
