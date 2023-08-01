@@ -371,3 +371,17 @@ main{
     visibility: visible;
 }
 
+.mode{
+    width: 30px;
+    background: orangered;
+    border-radius: 10px;
+    border: none;
+}
+
+#modeButton{
+    float: left;
+    width: 60%;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+}
