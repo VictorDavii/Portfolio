@@ -385,3 +385,18 @@ main{
     border: none;
     border-radius: 10px;
 }
+#footerBody{
+    height: 10rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}   
+#footerBody h2{
+    color: var(--color-principal);
+}
+#footerBody p{
+    color: var(--color-secundaria);
+}
